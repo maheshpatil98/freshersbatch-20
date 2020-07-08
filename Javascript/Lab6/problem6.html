@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validate() {
+            var barbie = document.getElementById("barbie").value;
+            var phone = document.getElementById("phone").value;
+            var calculator = document.getElementById("calculator").value;
+            var dvd = document.getElementById("dvd").value;
+
+            if(barbie=="")
+                barbie=0;
+            if(phone=="")
+                phone=0;
+            if(calculator=="")
+                calculator=0;
+            if(dvd=="")
+                dvd=0;
+                
+            if (barbie == 0 && phone == 0 && calculator == 0 && dvd == 0)
+                alert("Select an Item");
+            else {
+
+                openIt();
+
+            }
+        }
+
+        function openIt() {
+
+            myWindow = open('', 'mywin', 'height=300,width=300,scrollbars=yes');
+
+            myWindow.document.writeln("<html><head><title>fun</title></head><body>");
+
+            myWindow.document.writeln("<table border='1'>");
+
+            myWindow.document.writeln("<thead><td>Product</td><td>Quantity</td><td>Price</td><td>Total</td></tr></thead>");
+                if(barbie.value!=0)
+            myWindow.document.writeln("<thead><td>Barbie</td><td>" + barbie.value +"</td><td>20</td><td> " + (barbie.value*20) +"</td></tr>");
+                if(calculator.value!=0)
+            myWindow.document.writeln("<thead><td>Calculator</td><td>" + calculator.value +"</td><td>30</td><td> " + (calculator.value*30) +"</td></tr>");
+                if(phone.value!=0)
+            myWindow.document.writeln("<thead><td>Mobile Phone</td><td>" + phone.value +"</td><td>40</td><td> " + (phone.value*40) +"</td></tr>");
+                if(dvd.value!=0)
+            myWindow.document.writeln("<thead><td>CD DVD</td><td>" + dvd.value+"</td><td>50</td><td> " + (dvd.value*50) +"</td></tr>");
+
+            myWindow.document.writeln("</table></body></html>");
+
+            myWindow.document.close();
+
+            myWindow.focus();
+
+        }
+    </script>
+</head>
+
+<body style="background-color: aqua;">
+    <form onclick="validate">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>BarbieDoll</td>
+                <td>Beautiful</td>
+                <td>20</td>
+                <td><input type="number" name="barbie" id="barbie"></td>
+            </tr>
+            <tr>
+                <td>Calculator</td>
+                <td>Calculator with latest features</td>
+                <td>30</td>
+                <td><input type="number" name="calculator" id="calculator"></td>
+            </tr>
+            <tr>
+                <td>Mobile Phone</td>
+                <td>Camera, Java, Games, GPRS</td>
+                <td>40</td>
+                <td><input type="number" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td>LG DVD</td>
+                <td>5 disc changer</td>
+                <td>50</td>
+                <td><input type="number" name="dvd" id="dvd"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onclick="validate()"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

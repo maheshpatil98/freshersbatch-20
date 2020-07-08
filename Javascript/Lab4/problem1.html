@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Arrays
+    </title>
+</head>
+
+<body>
+    <h1>List Of Employees</h1>
+        -----------------------------------------
+    <p id="demo">
+    </p>
+    <script lang="JavaScript">
+        
+        var arr = ["Tove", "Hege", "Stale", "Kai Jim", "Borge", "undefined"];
+        var len = arr.length;
+        text = "<ol type='1'>";
+        for (i = 0; i < len; i++) {
+            text += "<li>" + arr[i] + "</li>";
+        }
+        text += "</ol>";
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+
+</body>
+
+</html>

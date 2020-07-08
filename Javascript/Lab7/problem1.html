@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function compute() {
+            var amount = document.getElementById("amount").value;
+            var percentage = document.getElementById("percentage").value;
+            var period = document.getElementById("period").value;
+
+            var inresetRate = amount * (1 + (percentage * period));
+            var monthly = inresetRate / 12;
+            if (amount > 150000) {
+                alert("Amount must be less than 150000");
+            }
+            else if (period < 7 || period > 15) {
+                alert("Period must be between 7 and 15")
+            } else {
+                document.getElementById("monthly").value = monthly;
+                document.getElementById("total").value = inresetRate;
+                document.getElementById("interest").value = inresetRate;
+            }
+        }
+    </script>
+    <!-- <form> -->
+    <table>
+        <thead>
+            <td colspan="2"><b>Enter Load Information<b></td>
+        </thead>
+        <tr>
+            <td>1. Amount of the loan (any curreny): </td>
+            <td><input type="number" name="amount" id="amount"></td>
+        </tr>
+        <tr>
+            <td>2. Annual percentage rate of iunterest: </td>
+            <td><input type="number" name="percentage" id="percentage"></td>
+        </tr>
+        <tr>
+            <td>3. Repayment period in years: </td>
+            <td><input type="number" name="period" id="period"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="submit" onclick="compute()"></td>
+        </tr>
+    </table>
+
+
+
+    <table>
+        <thead>
+            <td colspan="2"><b>Payment Information<b></td>
+        </thead>
+        <tr>
+            <td>4. Your Monthly payment would be: </td>
+            <td><input type="number" name="monthly" id="monthly" readonly></td>
+        </tr>
+        <tr>
+            <td>5. Your total payment will be: </td>
+            <td><input type="number" name="total" id="total" readonly></td>
+        </tr>
+        <tr>
+            <td>6. Your total interest paymnet will be: </td>
+            <td><input type="number" name="interest" id="interest" readonly></td>
+        </tr>
+    </table>
+    <!-- </form> -->
+</body>
+
+</html>
