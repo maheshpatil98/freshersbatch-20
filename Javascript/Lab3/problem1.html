@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <titile>
+
+    </titile>
+
+</head>
+<body>
+    <script lang="JavaScript">
+        var dateInfo=new Date();
+        var time =dateInfo.getHours();
+        document.write(dateInfo.toUTCString()+"<br>")
+        if(time<12){
+            document.write("Good Morning");
+        }
+        else if(time>=12&&time<=17){
+            document.write("Good Afternoon");        
+            }
+        else{
+            document.write("Good Evening");
+        }
+        
+    </script>
+    
+</body>
+
+</html>

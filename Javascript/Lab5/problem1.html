@@ -1,0 +1,66 @@
+<html>
+
+
+<head>
+    <title> window example </title>
+</head>
+<script>
+    var myWindow;
+    function nwindow() {
+        var width = document.getElementById("width").value;
+        var height = document.getElementById("height").value;
+        var left = document.getElementById("left").value;
+        var right = document.getElementById("right").value;
+
+        myWindow = open('', 'mywin', 'height=' + width + ',width=' + height + ',scrollbars=yes');
+
+        myWindow.document.writeln("<html><head><title>fun</title></head><body>");
+
+        myWindow.document.writeln("This window is opened clickingon the new window");
+
+        myWindow.document.writeln("</body></html>");
+
+        myWindow.moveTo(left, right);
+
+        myWindow.document.close();
+
+        myWindow.focus();
+
+    }
+
+</script>
+
+<body>
+    <form id="frmlab">
+        <table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+
+            <thead>
+                <td colspan="4">Create new Window</td>
+            </thead>
+            <thead>
+                <td colspan="4">Window Size</td>
+            </thead>
+            <tr>
+                <td>Width</td>
+                <td><input type="number" name="width" id="width"></td>
+                <td>Height</td>
+                <td><input type="number" name="height" id="height"></td>
+            </tr>
+            <thead>
+                <td colspan="4">Position</td>
+            </thead>
+            <tr>
+                <td>Left</td>
+                <td><input type="number" name="left" id="left"></td>
+                <td>Top</td>
+                <td><input type="number" name="right" id="right"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="button" value="New Window" onclick="nwindow()"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
