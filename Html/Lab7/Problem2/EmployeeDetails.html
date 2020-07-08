@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Details</title>
+    </head>
+    <body>
+        <form action="mailto:empinfo@capgemini.com" name="ab" method="post" enctype="multipart/form-data">
+            <p>
+                <table border="1" style="background-color:rgb(87, 198, 226)">
+                    <tr>
+                        <td align="center"> Name</td>
+                        <td><input type="text" maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Code</td>
+                        <td><input type="text" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Department</td>
+                        <td><input type="radio" value="Admin">Admin
+                        <input type="radio" value="HR">HR
+                        <input type="radio" value="Technicals">Technicals
+                        <input type="radio" value="Accounts">Accounts</td>
+
+                    </tr>
+                    <tr>
+                        <td align="center">date of joining</td>
+                        <td><input id="date" name="date" type="date" min="14-08-2014" max="14-08-2015"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Address</td>
+                        <td><textarea name="addr" id="1" cols="30" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> Training programs attended</td>
+                        <td><input type="checkbox" name="HTML/DHTML" id="1">HTML/DHTML
+                            <input type="checkbox" name="Java" id="2">Java
+                            <input type="checkbox" name="Client/Server" id="3">Client/Server
+                            <input type="checkbox" name=".Net" id="4">.Net
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">Training programs need to attend </td >
+                        <td>
+                            <select name="courses" id="101">
+                                <option selected>Java</option>
+                                <option>HTML/DHTML</option>
+                                <option>Client/server</option>
+                                <option>.NET</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">Send the information at </td>
+                        <td><a href="mailto:empinfo@capgemini.com">empinfo@capgemini.com</a></td>
+                    </tr>
+                
+                </table>
+            </p>
+
+        </form>
+    </body>
+</html>
